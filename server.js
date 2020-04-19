@@ -1,3 +1,5 @@
+var port = process.env.PORT || 3000;
+
 const express = require('express')
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -14,6 +16,6 @@ app.use(bodyParser.json());
 
 require("./routes/dashboard")(app,fetch);
 
-app.listen(3000,function(){
+app.listen(port,function(){
 	console.log('App is running on port 3000');
 })
